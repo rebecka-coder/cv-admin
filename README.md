@@ -16,4 +16,4 @@ Detta är en administrationssida för att kunna lagra, ändra, hämta och radera
 
 Länk till admin
 
-Admin
+[Admin[(http://studenter.miun.se/~reho0301/dt173g/cvprojekt/admin/login.php)
