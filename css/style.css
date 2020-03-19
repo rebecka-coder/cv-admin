@@ -1,0 +1,253 @@
+/*Projektuppgift CV adminsida - stilmall, av Rebecka Högström VT-20*/
+/*För alla skärmstorlekar*/
+body {
+    background: #eee;
+}
+* {
+    box-sizing: border-box;
+} 
+/*Rubriker*/
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 2em;
+}
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 1em;
+    margin-top: 2em;  
+    margin-left: 1em;  
+}
+/*Inloggningssida*/
+.login {
+    text-align: center;
+}
+.login label {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+}
+.login input[type=text] {
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+.login input[type=button], .login input[type=submit], .login input[type=reset],
+#submitS, #submitP, #submitW {
+    background-color: blue;
+    border-radius: 5px;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+/*Navigeringsmeny*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+li {
+    float: left;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.4em;
+}
+li a:hover {
+    background-color: #111;
+}
+/*Formulär*/
+.forms {
+    border-radius: 5px;
+    padding: 20px;
+    width: 30%;
+    font-size: 1.2em;
+    margin-bottom: 2em;
+}
+#updateForms {
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 1.2em;
+    margin-bottom: 2em;
+}
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border-radius: 4px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+#update, #delete {
+    color: white;
+    padding: 14px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#update, .updateW, .updateP, .updateS {
+    background-color: green;
+}
+.updateW, .updateP, .updateS {
+    width: 30%;
+    color: white;
+    padding: 14px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#delete {
+    background-color: red;
+}
+/*Bilder*/
+.projectImg {
+    width: 70%;
+    margin-right: -60%;
+}
+/*Skärmstorlek för mobil*/
+@media (max-width:768px) {
+.login input[type=text] {
+    width: 100%;
+}
+.forms {
+    width: 100%;
+}
+li a {
+padding: 8px 10px;
+}
+/*Ta bort tabell*/
+table, thead, tbody, th, td, tr { 
+    display: block; 
+}
+/*Dölj rubrikerna*/
+thead tr { 
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+tr { border: 1px solid darkgrey; 
+    padding: 10px;
+}
+/*Skapa rader*/
+td { 
+    border: none;
+    border-bottom: 1px solid #eee; 
+    position: relative;
+    padding-left: 50%;
+    margin-bottom: 1em; 
+}
+td:before { 
+    /*tabellrubriker*/
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%; 
+    padding-right: 10px; 
+    white-space: nowrap;
+    font-size: 1.2em;
+    color: darkblue;
+    margin-bottom: 2em;
+}
+/*Mina rubriker*/
+td:nth-of-type(1):before { content: "Lärosäte:"; }
+td:nth-of-type(2):before { content: "Titel:"; }
+td:nth-of-type(3):before { content: "Start/slutdatum:"; }
+td:nth-of-type(4):before { content: ""; }
+td:nth-of-type(5):before { content: ""; }
+
+/*Knappar*/
+#update, #delete {
+    width: 80%;
+}
+}
+/*Skärmstorlek för tablet*/
+@media (min-width:768px) and (max-width:1024px) {
+
+/*Inloggning*/
+.login input[type=text] {
+    width: 40%;
+}
+/*Navigering*/
+li a {
+    padding: 20px 30px;
+}
+/*Formulär*/
+.forms {
+    width: 50%;
+}
+/*Tabell för inlägg*/
+table {
+    border-collapse: collapse;
+    width: 90%;
+    margin-bottom: 1.5em;
+  }
+th {
+    text-align: left;
+    padding: 10px;
+    font-size: 1.2em;
+    color: darkblue;
+}
+td {
+    text-align: left;
+    font-size: 1.2em;
+    padding: 10px;
+}
+tr:nth-child(even) {
+    background-color: white;
+}
+#update, #delete {
+    width: 100%;
+}
+#updateForms {
+    width: 150%;
+}
+}
+/*Skärmstorlek för desktop*/
+@media (min-width: 1024px) {
+.login input[type=text] {
+        width: 20%;
+}
+li a {
+    padding: 20px 30px;
+}
+/*Tabell för inlägg*/
+table {
+    border-collapse: collapse;
+    width: 90%;
+    margin-bottom: 1.5em;
+  }
+th {
+    text-align: left;
+    padding: 10px;
+    font-size: 1.2em;
+    color: darkblue;
+}
+td {
+    text-align: left;
+    font-size: 1.2em;
+    padding: 10px;
+}
+tr:nth-child(even) {
+    background-color: white;
+}
+#update, #delete {
+width: 100%;
+}
+#updateForms {
+    width: 100%;
+}
+}
+
+
